@@ -13,14 +13,15 @@ return new class extends Migration
     {
         Schema::create('todo', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('user_id');
-            $table->foreign('id_user')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->boolean('complete')->default(false);
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
