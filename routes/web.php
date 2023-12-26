@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\todo\todoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Define routes for TodoController
+Route::middleware(['auth'])->group(function () {
+    // Display Todo listing
+    Route::get('/todos', [todoController::class, 'index'])->name('todos.index');
+    Route::patch('/todos/{id}', [todoController::class, 'update'])->name('todos.update');
+
+    // Store a new Todo
+    Route::post('/todos', [todoController::class, 'store'])->name('todos.store');
+});

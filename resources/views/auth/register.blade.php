@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+<style>
+    body {
+        background: url('https://r4.wallpaperflare.com/wallpaper/885/751/661/rain-artwork-women-earring-wallpaper-9b06dcbde3413ff955041b099dec4cf0.jpg') center/cover no-repeat fixed;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.8);
+        border: none; /* Menghilangkan border kartu */
+    }
+
+    .card-header {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-bottom: none; /* Menghilangkan border bawah judul kartu */
+    }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
