@@ -3,7 +3,6 @@
 @extends('layouts.app')  <!-- Assuming you have a layout file, adjust as needed -->
 
 @section('content')
-
 <style>
     body {
         background: url('https://r4.wallpaperflare.com/wallpaper/885/751/661/rain-artwork-women-earring-wallpaper-9b06dcbde3413ff955041b099dec4cf0.jpg') center/cover no-repeat fixed;
